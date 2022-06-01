@@ -26,7 +26,8 @@ class PetSeeder extends Seeder
             'name' => 'Blacky',
             'age' => 3,
             'type' => 'Dog',
-            'weight' => 3.14
+            'weight' => 3.14,
+            'id'=>134568
         ]);
     }
 }
