@@ -1,6 +1,7 @@
 /.git
 /.svn
 /.idea
+/.env
 /node_modules
 /public/hot
 /public/storage
