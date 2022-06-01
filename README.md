@@ -1,20 +1,21 @@
-# Laravel AdminLTE
+# Pet Central
 
-This is a ready to use AdminLTE template for Laravel 5.8
+Tugas Besar PWL Kelompok:
+1. Bernadus Indra Wijaya (2072003)
+2. Stefanus (2072013)
+3. Moses Marzuki Samosir (2072042)
 
-## What's Inside
+## Project Info
 
-1. AdminLTE v3.0.0-beta
+This project uses Laravel 5.8
 
-    Only /dist folder is included. You can find the templates in view/layouts and view/auth.
+   Default from laravel, with changes:
 
-2. Laravel 5.8
+   - route /starter -> to preview how the dashboard looks like (disable it when in productions)
+   - disabled Auth route /verify & /reset and no blade template applied for them
+   - change /home to /dashboard (the controller too)
 
-    Default from laravel, with changes:
-
-    - route /starter -> to preview how the dashboard looks like (disable it when in productions)
-    - disabled Auth route /verify & /reset and no blade template applied for them
-    - change /home to /dashboard (the controller too)
+Laravel template from [rpahlevy](https://github.com/rpahlevy/laravel-adminlte3)
 
 ## Setup
 
@@ -22,20 +23,20 @@ This is a ready to use AdminLTE template for Laravel 5.8
 
 #### Using Git
 
-You can clone this repository & rename it to your project
+You can clone this repository using this command:
 
 ````
-git clone https://github.com/rpahlevy/laravel-adminlte3 your-project-name
+git clone https://github.com/berwizlelanzy/tugas_besar_pwl
 ````
 
 #### Without Git
 
-Click that green button on right top corner (Clone or download) -> Download ZIP
+Click that green button on right top corner (Code) -> Download ZIP
 Extract it and rename to your project name
 
 ### 2. Install Dependencies
 
-Change composer.json to your liking first (detail of your project). Make sure you have composer installed, then cd to the project folder and do the following
+Install project dependencies by using this command in the project root:
 
 ````
 composer install
@@ -43,7 +44,7 @@ composer install
 
 ### 3. Setup .env
 
-Clone .env.example or just rename it to .env then fill in the details & don't forget to setup your DB.
+Clone .env.example to .env then fill in the details & don't forget to setup your DB.
 
 Then generate app key by running:
 
@@ -53,18 +54,30 @@ php artisan key:generate
 
 ### 4. Migrate DB
 
-If your web needs Auth (who don't?) migrate the default DB from Laravel. Still on the project, run:
+Migrate the databases from Laravel. Still on the project root, run:
 
 ````
 php artisan migrate
 ````
 
+Or if you want dummy data inserts, then use this command instead:
+
+````
+php artisan migrate --seed
+````
+
 ### 5. Serve Your Web
 
-Serve locally using php built in and visit localhost:8000/starter
+Serve locally using php built in and visit localhost:8000
 
 ````
 php artisan serve
 ````
 
-To get into the dashboard go to /register first.
+If you don't have dummy data inserts, to get into the dashboard go to /register first.
+
+## List of dummy account emails
+    kartika83@maryati.asia
+    enteng16@hutasoit.web.id
+    lestari.ghaliyati@sirait.co.id
+All dummy accounts use "password" as the password.
