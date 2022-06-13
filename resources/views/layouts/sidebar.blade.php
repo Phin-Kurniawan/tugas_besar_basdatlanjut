@@ -17,6 +17,7 @@
             </div>
             <div class="info">
                 <a href="#" class="d-block">{{Auth::user()->name}}</a>
+                <p style="color: white">Role: {{Auth::user()->role}}</p>
             </div>
         </div>
         @endauth
