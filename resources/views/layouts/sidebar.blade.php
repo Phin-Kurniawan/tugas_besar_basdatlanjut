@@ -2,9 +2,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{route('dashboard')}}" class="brand-link">
-        <img src="{{asset('img/app-logo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+        <img src="{{asset('img/pet-central-logo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
-        <span class="brand-text font-weight-light">{{config('app.name')}}</span>
+        <span class="brand-text font-weight-light">Pet Central</span>
     </a>
 
     <!-- Sidebar -->
@@ -31,6 +31,42 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
+                @if (Auth::user()->role == 'doctor')
+                {{-- Menus for doctor role --}}
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-users"></i>
+                            <p>Appointments</p>
+                        </a>
+                    </li>
+                @endif
+                @if (Auth::user()->role == 'owner')
+                {{-- Menus for owner role --}}
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-map-marker"></i>
+                            <p>Find Vets</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-newspaper-o"></i>
+                            <p>Articles / Tutorials</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-shopping-cart"></i>
+                            <p>Pet Shop</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-calendar"></i>
+                            <p>Events</p>
+                        </a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <form id="logout-form" action="{{route('logout')}}" method="post">
                         @csrf

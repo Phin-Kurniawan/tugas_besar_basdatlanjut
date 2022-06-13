@@ -3,7 +3,7 @@
 @section('content')
 <div class="card">
     <div class="card-body login-card-body">
-        <p class="login-box-msg">{{ __('Register') }}</p>
+        <p class="login-box-msg">{{ __('Register Owner') }}</p>
 
         <form action="{{route('register')}}" method="post">
             @csrf
@@ -70,6 +70,9 @@
             <a href="{{ route('login') }}" class="text-center">{{ __('Sudah punya akun? Login sekarang') }}</a>
         </p>
         @endif
+        <p class="mb-0 text-center">
+            <a>{{ __('Register sebagai dokter')}}</a>
+        </p>
     </div>
     <!-- /.login-card-body -->
 </div>
