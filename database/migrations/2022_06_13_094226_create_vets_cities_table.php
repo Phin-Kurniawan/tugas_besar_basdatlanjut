@@ -13,7 +13,7 @@ class CreateVetsCitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('vets_cities', function (Blueprint $table) {
+        Schema::create('vet_cities', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('city', 50);
@@ -27,6 +27,6 @@ class CreateVetsCitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vets_cities');
+        Schema::dropIfExists('vet_cities');
     }
 }
