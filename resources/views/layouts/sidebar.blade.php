@@ -31,6 +31,15 @@
                         <p>Home</p>
                     </a>
                 </li>
+                @if (Auth::user()->role == 'admin')
+                {{-- Menus for admin role --}}
+                    <li class="nav-item">
+                        <a href="{{route('articles')}}" class="nav-link">
+                            <i class="nav-icon fa fa-newspaper-o"></i>
+                            <p>Articles / Tutorials</p>
+                        </a>
+                    </li>
+                @endif
                 @if (Auth::user()->role == 'doctor')
                 {{-- Menus for doctor role --}}
                     <li class="nav-item">
@@ -49,7 +58,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('articles')}}" class="nav-link">
                             <i class="nav-icon fa fa-newspaper-o"></i>
                             <p>Articles / Tutorials</p>
                         </a>
