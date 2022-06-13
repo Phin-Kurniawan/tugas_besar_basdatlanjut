@@ -61,7 +61,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('event')}}" class="nav-link">
                             <i class="nav-icon fa fa-calendar"></i>
                             <p>Events</p>
                         </a>

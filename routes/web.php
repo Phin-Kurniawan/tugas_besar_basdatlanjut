@@ -18,6 +18,7 @@ Route::get('/', function() {
 Auth::routes(['verify' => false, 'reset' => false]);
 
 Route::middleware('auth')->group(function() {
-    Route::get('/home', 'DashboardController@index')->name('dashboard');
+    Route::get('/home', 'DashboardController@index')->name('home');
     Route::get('/find_vets', 'FindVetsController@index')->name('find_vets');
+    Route::get('/event', 'EventController@index')->name('event');
 });
