@@ -77,7 +77,7 @@ php artisan serve
 If you don't have dummy data inserts, to get into the dashboard go to /register first.
 
 ## List of dummy account emails (and their roles)
-    kartika83@maryati.asia (doctor)
-    enteng16@hutasoit.web.id (admin)
-    lestari.ghaliyati@sirait.co.id (owner)
+    doctor@dummy.com (doctor)
+    admin@dummy.com (admin)
+    owner@dummy.com (owner)
 All dummy accounts use "password" as the password.

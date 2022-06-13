@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'id' => '25057116',
             'name' => 'Nrima Damanik',
-            'email' => 'kartika83@maryati.asia',
+            'email' => 'doctor@dummy.com',
             'address' => 'Jl Cinere Raya 36, Dki Jakarta',
             'phone' => '0217530270',
             'password' => Hash::make('password'),
@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'id' => '230933919',
             'name' => 'Ika Permata',
-            'email' => 'enteng16@hutasoit.web.id',
+            'email' => 'admin@dummy.com',
             'address' => 'Jl Wastukencana 5, Jawa Barat',
             'phone' => '0224230061',
             'password' => Hash::make('password'),
@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'id' => '02174867',
             'name' => 'Prabowo Pradana',
-            'email' => 'lestari.ghaliyati@sirait.co.id',
+            'email' => 'owner@dummy.com',
             'address' => 'Jl Cihapit 34 Lt 2, Jawa Barat',
             'phone' => '022431628',
             'password' => Hash::make('password'),
