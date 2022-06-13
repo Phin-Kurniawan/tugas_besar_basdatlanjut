@@ -14,13 +14,10 @@
 Route::get('/', function() {
     return redirect(route('login'));
 });
-Route::get('/starter', function() {
-    return view('starter');
-});
 
 Auth::routes(['verify' => false, 'reset' => false]);
 
 Route::middleware('auth')->group(function() {
-    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('/home', 'DashboardController@index')->name('dashboard');
     Route::get('/find_vets', 'FindVetsController@index')->name('find_vets');
 });
