@@ -43,7 +43,7 @@
                 @if (Auth::user()->role == 'owner')
                 {{-- Menus for owner role --}}
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('find_vets')}}" class="nav-link">
                             <i class="nav-icon fa fa-map-marker"></i>
                             <p>Find Vets</p>
                         </a>

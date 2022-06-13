@@ -22,4 +22,5 @@ Auth::routes(['verify' => false, 'reset' => false]);
 
 Route::middleware('auth')->group(function() {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('/find_vets', 'FindVetsController@index')->name('find_vets');
 });
