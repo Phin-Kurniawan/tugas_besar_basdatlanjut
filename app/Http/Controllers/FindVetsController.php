@@ -10,7 +10,7 @@ class FindVetsController extends Controller
 {
     public function index(){
         $path = Vets::all();
-        return view('layouts.find_vets',['vets'=>$path]);
+        return view('vets.find_vets',['vets'=>$path]);
 
     }
 }
