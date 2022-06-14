@@ -83,7 +83,7 @@
 					<td>{{$item->vet->address}}</td>
 					<td>{{$item->doctor->name}}</td>
 					<td>{{$item->date}}</td>
-					<td><a href="{{route('editAppointment', ['id' => $item->id])}}" class="btn btn-warning"><i class="fa fa-pencil"></i></a> <button class="btn btn-danger" onclick="delAppointment({{$item->id}})"><i class="fa fa-trash"></i></button></td>
+					<td><a href="{{route('editAppointment', ['id' => $item->id])}}" class="btn btn-warning"><i class="fa fa-pencil"></i></a> <button class="btn btn-danger" onclick="cancelAppointment({{$item->id}})"><i class="fa fa-trash"></i></button></td>
 				</tr>
 			@endforeach
 
