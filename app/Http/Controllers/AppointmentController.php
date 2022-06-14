@@ -11,4 +11,10 @@ class AppointmentController
         return view('Appointment.appointment', ['appointment'=>$appointment]);
     }
 
+    public function delete(Appointment $appointment){
+        $appointment->delete();
+
+        return redirect(route('appointment'));
+    }
+
 }
