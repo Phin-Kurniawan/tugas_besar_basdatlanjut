@@ -19,9 +19,19 @@
 </div>
 <!-- /.content-header -->
 
+<script>
+	function cancelAppointment(id){
+		const confirm = window.confirm("Are you sure wan to cancel this Appointment ?")
+		if(confirm){
+			window.location = '/appointment/delete/'+ id;
+		}
+	}
+</script>
 <!-- Main content -->
 <div class="content">
 	<div class="container-fluid">
+
+
 
 		<table>
 			<thead>
@@ -44,7 +54,7 @@
 					<td>{{$item->vet->address}}</td>
 					<td>{{$item->doctor->name}}</td>
 					<td>{{$item->date}}</td>
-					<td><a href="">Cancel</a></td>
+					<td><button onclick="cancelAppointment({{$item->id}})">Cancel</button></td>
 				</tr>
 			@endforeach
 
