@@ -6,12 +6,13 @@
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1 class="m-0 text-dark">Appointments</h1>
+				<h1 class="m-0 text-dark">Edit Appointment</h1>
 			</div><!-- /.col -->
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-					<li class="breadcrumb-item active">Appointments</li>
+					<li class="breadcrumb-item">Home</li>
+                    <li class="breadcrumb-item"><a href="{{route('appointment')}}">Appointments</a></li>
+					<li class="breadcrumb-item active">Edit Appointment</li>
 				</ol>
 			</div><!-- /.col -->
 		</div><!-- /.row -->
@@ -20,12 +21,11 @@
 <!-- /.content-header -->
 
 <script>
-	function cancelAppointment(id){
-		const confirm = window.confirm("Are you sure wan to cancel this Appointment ?")
-		if(confirm){
-			window.location = '/appointment/delete/'+ id;
-		}
+function delAppointment(id){
+	if(confirm('Are you sure you want to delete this appointment?')){
+		window.location = '/appointment/delete/' + id;
 	}
+}
 </script>
 
 <!-- Main content -->
@@ -54,7 +54,7 @@
 					<td>{{$item->vet->address}}</td>
 					<td>{{$item->doctor->name}}</td>
 					<td>{{$item->date}}</td>
-					<td><button onclick="cancelAppointment({{$item->id}})">Cancel</button></td>
+					<td><a href="">Cancel</a></td>
 				</tr>
 			@endforeach
 
