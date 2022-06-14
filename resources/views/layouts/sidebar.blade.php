@@ -49,7 +49,7 @@
                 @if (Auth::user()->role == 'doctor')
                 {{-- Menus for doctor role --}}
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('appointment')}}" class="nav-link">
                             <i class="nav-icon fa fa-users"></i>
                             <p>Appointments</p>
                         </a>
