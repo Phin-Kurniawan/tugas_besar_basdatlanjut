@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ __('Pet Central') }}</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{asset('css/fontawesome.min.css')}}">
