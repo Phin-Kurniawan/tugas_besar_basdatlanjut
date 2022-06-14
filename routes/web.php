@@ -33,4 +33,7 @@ Route::middleware('auth')->group(function() {
     Route::post('/articles/edit/{article}', 'ArticlesController@update')->name('editArticle');
     Route::get('/articles/details/{article}', 'ArticlesController@details')->name('articleDetails');
     Route::get('/appointment', 'AppointmentController@index')->name('appointment');
+    Route::post('/appointment', 'AppointmentController@add')->name('addAppointment');
+    Route::get('/appointment/delete/{appointment}', 'AppointmentController@delete')->name('delAppointment');
+    
 });
