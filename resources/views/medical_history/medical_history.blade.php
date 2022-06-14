@@ -19,42 +19,22 @@
 </div>
 <!-- /.content-header -->
 
-<script>
-	function cancelAppointment(id){
-		const confirm = window.confirm("Are you sure wan to cancel this Appointment ?")
-		if(confirm){
-			window.location = '/appointment/delete/'+ id;
-		}
-	}
-</script>
 <!-- Main content -->
 <div class="content">
 	<div class="container-fluid">
 
-
-
 		<table>
 			<thead>
 			<tr>
-				<th>Owner</th>
-				<th>Pet name</th>
-				<th>Vet Name</th>
-				<th>Vet Address</th>
-				<th>Doctor</th>
-				<th>Date</th>
-				<th>Action</th>
+				<th>Name Pet</th>
+				<th>Diagnostic Result</th>
 			</tr>
 			</thead>
 			<tbody>
-			@foreach($appointment as $item)
+			@foreach($ as $item)
 				<tr>
-					<td>{{$item->user->name}}</td>
-					<td>{{$item->pet->name}}</td>
-					<td>{{$item->vet->name}}</td>
-					<td>{{$item->vet->address}}</td>
-					<td>{{$item->doctor->name}}</td>
-					<td>{{$item->date}}</td>
-					<td><button class="btn btn-danger" onclick="cancelAppointment({{$item->id}})">Cancel</button></td>
+					<td>{{Auth::user()->pet}}</td>
+					<td>{{$item->address}}</td>
 				</tr>
 			@endforeach
 

@@ -78,7 +78,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fa fa-shopping-cart"></i>
-                            <p>Pet Shop</p>
+                            <p>Medical History</p>
                         </a>
                     </li>
                     <li class="nav-item">
