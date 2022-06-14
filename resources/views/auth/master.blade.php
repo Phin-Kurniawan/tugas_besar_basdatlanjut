@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Pet Central Login</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{asset('css/fontawesome.min.css')}}">
@@ -23,7 +23,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            {{config('app.name')}}
+            {{__('Pet Central')}}
         </div>
         
         @yield('content')
