@@ -131,6 +131,8 @@ function delArticle(id){
 			</div>
 		</div>
 
+		<br>
+		<h4>All Articles</h4>
 		{{-- Cards for all articles --}}
 		<div style="margin: auto; max-width:80%;">
 			<div class="row row-cols-*">

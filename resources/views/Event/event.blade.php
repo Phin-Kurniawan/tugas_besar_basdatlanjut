@@ -82,7 +82,7 @@ function delEvent(id){
 			</div>
 		</div>
 
-		<h4>Events</h4>
+		<h4>All Events</h4>
 		{{-- Cards for all articles --}}
 		<div style="margin: auto; max-width:80%;">
 			<div class="row row-cols-*">

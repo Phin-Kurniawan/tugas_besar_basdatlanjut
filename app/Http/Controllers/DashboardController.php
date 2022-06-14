@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Articles;
+use App\Event;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -23,6 +25,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $featuredEvents = Event::where('featured', 'true')->get();
+        $featuredArticle = Articles::where('featured', 'true')->get();
+        return view('home', ['events' => $featuredEvents, 'articles' => $featuredArticle]);
     }
 }
