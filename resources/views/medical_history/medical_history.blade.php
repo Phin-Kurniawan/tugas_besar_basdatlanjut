@@ -48,15 +48,13 @@
 			<tbody>
 			@foreach($pets as $pet)
 				<tr>
-					<td>{{$pet->name}}</td>
 					@foreach($pet->medicalHistory as $history)
+						<td>{{$pet->name}}</td>
 						<td>{{$history->diagnostic_result}}</td>
 					@endforeach
 				</tr>
 			@endforeach
-
 			</tbody>
-
 		</table>
 		{{-- main content here --}}
 

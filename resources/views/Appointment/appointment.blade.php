@@ -73,6 +73,7 @@
 			</div>
 			<button type="submit" class="btn btn-primary">Create Appointment</button>
 		</form>
+		<br>
 		<table>
 			<thead>
 			<tr>
