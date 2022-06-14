@@ -52,7 +52,15 @@ Then generate app key by running:
 php artisan key:generate
 ````
 
-### 4. Migrate DB
+### 4. Link storage
+
+Link storage to public folder using this command:
+
+````
+php artisan storage:link
+````
+
+### 5. Migrate DB
 
 Migrate the databases from Laravel. Still on the project root, run:
 
@@ -66,7 +74,7 @@ Or if you want dummy data inserts, then use this command instead:
 php artisan migrate --seed
 ````
 
-### 5. Serve Your Web
+### 6. Serve Your Web
 
 Serve locally using php built in and visit localhost:8000
 
