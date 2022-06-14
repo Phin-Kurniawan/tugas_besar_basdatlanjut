@@ -54,6 +54,12 @@
                             <p>Appointments</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{route('medicalHistory')}}" class="nav-link">
+                            <i class="nav-icon fa fa-history"></i>
+                            <p>Medical History</p>
+                        </a>
+                    </li>
                 @endif
                 @if (Auth::user()->role == 'owner')
                 {{-- Menus for owner role --}}
@@ -76,8 +82,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-shopping-cart"></i>
+                        <a href="{{route('medicalHistory')}}" class="nav-link">
+                            <i class="nav-icon fa fa-history"></i>
                             <p>Medical History</p>
                         </a>
                     </li>

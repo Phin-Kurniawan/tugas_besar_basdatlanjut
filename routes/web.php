@@ -37,4 +37,6 @@ Route::middleware('auth')->group(function() {
     Route::get('/appointment/delete/{appointment}', 'AppointmentController@delete')->name('delAppointment');
     Route::get('/appointment/update/{appointment}', 'AppointmentController@edit')->name('editAppointment');
     Route::post('/appointment/update/{appointment}', 'AppointmentController@update')->name('updAppointment');
+    Route::get('/medhistory', 'MedicalHistoryController@index')->name('medicalHistory');
+    Route::post('/medhistory', 'MedicalHistoryController@filter')->name('filterMedHstr');
 });
