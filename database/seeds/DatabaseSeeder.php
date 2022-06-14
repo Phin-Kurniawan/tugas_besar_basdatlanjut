@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(VetsCitySeeder::class);
         $this->call(VetsSeeder::class);
         $this->call(EventSeeder::class);
+        $this->call(AppointmentSeeder::class);
     }
 }

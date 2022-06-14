@@ -17,7 +17,8 @@ class PetSeeder extends Seeder
             'name' => 'Artyom',
             'age' => 5,
             'type' => 'Cat',
-            'weight' => 3.14
+            'weight' => 3.14,
+            'id'=>134567
         ]);
 
         // Dummy pet 2

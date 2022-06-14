@@ -27,4 +27,5 @@ Route::middleware('auth')->group(function() {
     Route::get('/articles/edit/{article}', 'ArticlesController@edit')->name('editArticle');
     Route::post('/articles/edit/{article}', 'ArticlesController@update')->name('editArticle');
     Route::get('/articles/details/{article}', 'ArticlesController@details')->name('articleDetails');
+    Route::get('/appointment', 'AppointmentController@index')->name('appointment');
 });

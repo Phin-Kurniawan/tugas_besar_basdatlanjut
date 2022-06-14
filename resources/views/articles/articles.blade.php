@@ -86,7 +86,7 @@ function delArticle(id){
 		@endphp
 		{{-- Carousel for featured articles --}}
 		<h3>Featured Articles / Tutorials</h3>
-		<div class="w-75" style="margin: auto">
+		<div class="w-50" style="margin: auto">
 			<div id="articleCarousel" class="carousel slide" data-bs-ride="true">
 				<div class="carousel-indicators">
 					@foreach($featuredArticles as $featured)

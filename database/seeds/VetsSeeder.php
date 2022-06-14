@@ -12,6 +12,7 @@ class VetsSeeder extends Seeder
     public function run()
     {
         DB::table('vets')->insert([
+            'id'=>'123',
             'name' => 'Dummy Vet 1',
             'address' => 'Dummy address 1',
             'phone' => '01234567891',
@@ -19,6 +20,7 @@ class VetsSeeder extends Seeder
         ]);
 
         DB::table('vets')->insert([
+            'id'=>'124',
             'name' => 'Dummy Vet 2',
             'address' => 'Dummy address 2',
             'phone' => '01234567892',

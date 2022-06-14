@@ -12,4 +12,8 @@ class Pet extends Model
     public function medicalHistory(){
         return $this->hasMany(MedicalHistory::class);
     }
+
+    public function owner(){
+        return $this->belongsTo(User::class);
+    }
 }
