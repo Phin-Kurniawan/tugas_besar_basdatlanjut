@@ -32,65 +32,14 @@ function delAppointment(id){
 <div class="content">
 	<div class="container-fluid">
 
-		@if (Auth::user()->role == 'owner')
-		<table>
-			<thead>
-			<tr>
-				<th>Owner</th>
-				<th>Pet name</th>
-				<th>Vet Name</th>
-				<th>Vet Address</th>
-				<th>Doctor</th>
-				<th>Date</th>
-				<th>Action</th>
-			</tr>
-			</thead>
-			<tbody>
-			@foreach($appointment as $item)
-				<tr>
-					<td>{{$item->user->name}}</td>
-					<td>{{$item->pet->name}}</td>
-					<td>{{$item->vet->name}}</td>
-					<td>{{$item->vet->address}}</td>
-					<td>{{$item->doctor->name}}</td>
-					<td>{{$item->date}}</td>
-					<td><a href="">Cancel</a></td>
-				</tr>
-			@endforeach
-
-			</tbody>
-
-		</table>
-		@else
-		<table>
-			<thead>
-			<tr>
-				<th>Owner</th>
-				<th>Pet name</th>
-				<th>Vet Name</th>
-				<th>Vet Address</th>
-				<th>Doctor</th>
-				<th>Date</th>
-				<th>Action</th>
-			</tr>
-			</thead>
-			<tbody>
-			@foreach($appointment as $item)
-				<tr>
-					<td>{{$item->user->name}}</td>
-					<td>{{$item->pet->name}}</td>
-					<td>{{$item->vet->name}}</td>
-					<td>{{$item->vet->address}}</td>
-					<td>{{$item->doctor->name}}</td>
-					<td>{{$item->date}}</td>
-					<td><a href="{{route('editAppointment', ['id' => $item->id])}}" class="btn btn-warning"><i class="fa fa-pencil"></i></a> <button class="btn btn-danger" onclick="delAppointment({{$item->id}})"><i class="fa fa-trash"></i></button></td>
-				</tr>
-			@endforeach
-
-			</tbody>
-
-		</table>
-		@endif
+		<form method="POST">
+			@csrf
+			<div class="mb-3">
+				<label for="date" class="form-label">Date</label>
+				<input type="text" class="form-control" name="date" required placeholder="Date (Unformatted)" value="{{$appointment->date}}">
+			</div>
+			<button type="submit" class="btn btn-primary">Change Date</button>
+		</form>
 		
 		{{-- main content here --}}
 
