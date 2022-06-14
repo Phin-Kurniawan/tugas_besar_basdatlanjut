@@ -21,6 +21,11 @@ Route::middleware('auth')->group(function() {
     Route::get('/home', 'DashboardController@index')->name('home');
     Route::get('/find_vets', 'FindVetsController@index')->name('find_vets');
     Route::get('/event', 'EventController@index')->name('event');
+    Route::post('/event', 'EventController@add')->name('addEvent');
+    Route::get('/event/details/{event}', 'EventController@detail')->name('eventDetails');
+    Route::get('/event/delete/{event}', 'EventController@delete')->name('eventDelete');
+    Route::get('/event/update/{event}', 'EventController@edit')->name('editEvent');
+    Route::post('/event/update/{event}', 'EventController@update')->name('eventUpdate');
     Route::get('/articles', 'ArticlesController@index')->name('articles');
     Route::post('/articles', 'ArticlesController@add')->name('addArticle');
     Route::get('/articles/delete/{article}', 'ArticlesController@delete')->name('delArticle');

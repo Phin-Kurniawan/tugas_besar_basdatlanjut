@@ -21,7 +21,7 @@ class EventMigration extends Migration
             $table->string('date', 30);
             $table->string('picture', 500);
             $table->string('link', 100);
-
+            $table->string('featured', 4)->default('');
         });
     }
 
