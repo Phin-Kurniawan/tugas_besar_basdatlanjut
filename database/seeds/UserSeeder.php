@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
         // Dummy user 1 (doctor)
         DB::table('users')->insert([
             'id' => '25057116',
-            'name' => 'Nrima Damanik',
+            'name' => 'Ir. Dr. Prof. Phin Kurniawan',
             'email' => 'doctor@dummy.com',
             'address' => 'Jl Cinere Raya 36, Dki Jakarta',
             'phone' => '0217530270',

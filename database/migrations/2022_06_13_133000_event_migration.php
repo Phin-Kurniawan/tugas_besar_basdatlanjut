@@ -14,7 +14,7 @@ class EventMigration extends Migration
     public function up()
     {
         Schema::create('events', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->timestamps();
             $table->string('title', 25);
             $table->string('news', 500);

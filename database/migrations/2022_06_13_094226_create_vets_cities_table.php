@@ -14,7 +14,7 @@ class CreateVetsCitiesTable extends Migration
     public function up()
     {
         Schema::create('vet_cities', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->timestamps();
             $table->string('city', 50);
         });

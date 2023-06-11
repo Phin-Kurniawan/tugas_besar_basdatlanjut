@@ -14,8 +14,8 @@ class CreatePetsTable extends Migration
     public function up()
     {
         Schema::create('pets', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');   // FK User
+            $table->id();
+            $table->unsignedBigInteger('user_id')->foreign()->references("id")->on("users");   // FK User
             $table->string('name', 255);
             $table->integer('age');
             $table->float('weight', 2, 1);

@@ -14,12 +14,12 @@ class CreateAppointmentsTable extends Migration
     public function up()
     {
         Schema::create('appointments', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->timestamps();
-            $table->string('owner_id', 20);
-            $table->string('pet_id', 20);
-            $table->string('vet_id', 20);
-            $table->string('doctor_id', 20);
+            $table->unsignedBigInteger('owner_id', 20)->foreign()->references("id")->on("users");
+            $table->unsignedBigInteger('pet_id', 20)->foreign()->references("id")->on("pets");
+            $table->unsignedBigInteger('vet_id', 20)->foreign()->references("id")->on("vets");
+            $table->unsignedBigInteger('doctor_id', 20)->foreign()->references("id")->on("users"); // kayanya gabener ini 2 foreign ke user
             $table->string('date', 20);
         });
     }

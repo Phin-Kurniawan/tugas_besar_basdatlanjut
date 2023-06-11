@@ -14,12 +14,12 @@ class CreateVetsTable extends Migration
     public function up()
     {
         Schema::create('vets', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->timestamps();
             $table->string('name', 100);
             $table->string('address', 50);
             $table->string('phone', 15);
-            $table->string('city_id', 20);
+            $table->unsignedBigInteger('city_id', 20)->foreign()->references("id")->on("vet_cities");
         });
     }
 

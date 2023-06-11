@@ -69,7 +69,7 @@
 			</div>
 			<div class="mb-3">
 				<label for="date" class="form-label">Date</label>
-				<input type="text" name="date" class="form-control" required placeholder="Date (Unformatted)">
+				<input type="date" name="date" class="form-control" required placeholder="Date">
 			</div>
 			<button type="submit" class="btn btn-primary">Create Appointment</button>
 		</form>
